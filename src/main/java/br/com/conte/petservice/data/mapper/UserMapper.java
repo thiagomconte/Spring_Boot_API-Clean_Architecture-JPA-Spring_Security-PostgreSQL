@@ -11,6 +11,6 @@ public class UserMapper {
     }
 
     public static User toUser(CreateUserRequest createUserRequest) {
-        return User.builder().username(createUserRequest.username()).password(createUserRequest.password()).build();
+        return User.builder().username(createUserRequest.email()).password(createUserRequest.password()).build();
     }
 }
