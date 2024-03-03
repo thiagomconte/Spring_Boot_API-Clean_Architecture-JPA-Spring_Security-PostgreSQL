@@ -35,7 +35,7 @@ public class PetController {
     public ResponseEntity<SuccessResponse<Void>> createPet(@RequestBody @Valid CreatePetRequest createPetRequest) {
         Pet pet = createPetRequest.toPet();
         createPetUseCase.execute(pet);
-        return ResponseEntity.status(HttpStatus.CREATED).body(new SuccessResponse<>("Pet created successfully", null));
+        return ResponseEntity.status(HttpStatus.CREATED).body(new SuccessResponse<>("Pet created successfully"));
     }
 
     @GetMapping()

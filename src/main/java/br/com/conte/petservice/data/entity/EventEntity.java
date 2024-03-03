@@ -12,6 +12,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.io.Serializable;
 import java.time.LocalDateTime;
 import java.util.Date;
 
@@ -20,7 +21,7 @@ import java.util.Date;
 @Entity
 @Table(name = "events")
 @NoArgsConstructor
-public class EventEntity {
+public class EventEntity implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

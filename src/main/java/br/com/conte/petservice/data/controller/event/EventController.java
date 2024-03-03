@@ -31,7 +31,7 @@ public class EventController {
     public ResponseEntity<SuccessResponse<Void>> createEvent(@RequestBody @Valid CreateEventRequest createEventRequest) {
         Event event = EventMapper.toEvent(createEventRequest);
         createEventUseCase.execute(event);
-        return ResponseEntity.status(HttpStatus.CREATED).body(new SuccessResponse<>("Event created successfully", null));
+        return ResponseEntity.status(HttpStatus.CREATED).body(new SuccessResponse<>("Event created successfully"));
     }
 
     @GetMapping("/{petId}")

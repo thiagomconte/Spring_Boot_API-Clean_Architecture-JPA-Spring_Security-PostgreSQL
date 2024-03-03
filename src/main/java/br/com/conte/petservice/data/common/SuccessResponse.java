@@ -15,4 +15,8 @@ public class SuccessResponse<T> {
         this.data = data;
         this.message = "success";
     }
+
+    public SuccessResponse(String message) {
+        this.message = message;
+    }
 }
